@@ -45,7 +45,7 @@ To use this project, you will need to have the following software installed on y
 export HADOOP_CLASSPATH=$HADOOP_CLASSPATH:/path/to/project/files
 export PYTHONPATH=$PYTHONPATH:/path/to/project/files
 ```
-## HiBench Setup
+## HiBench Setup and running Map Reduce 
 - To simply build all modules in HiBench, use the below command. This could be time consuming because the hadoopbench relies on 3rd party tools like Mahout and Nutch. The build process automatically downloads these tools for you. If you won't run these workloads, you can only build a specific framework to speed up the build process.
 ```
 mvn -Dspark=2.4 -Dscala=2.11 clean package
@@ -80,6 +80,7 @@ spark-submit /path/to/kmeans.py
 ```
 spark-submit /path/to/bayesian.py
 ```
+
 
 
 
