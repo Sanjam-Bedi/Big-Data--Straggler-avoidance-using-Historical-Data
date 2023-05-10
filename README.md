@@ -25,10 +25,24 @@ To use this project, you will need to have the following software installed on y
    <value>-1</value>
 </property> 
 ```
-
-
-
 - Modify the mapred-site.xml file in the etc/hadoop directory to include the following properties:
+```
+<property>
+   <name>mapreduce.job.reduce.slowstart.completedmaps</name>
+   <value>0.7</value>
+</property>
+<property>
+   <name>mapreduce.job.reduce.slowstart.maps</name>
+   <value>3</value>
+</property>
+<property>
+   <name>mapreduce.job.jvm.numtasks</name>
+   <value>-1</value>
+</property>
+```
+- Configure the hadoop-env.sh file in the etc/hadoop directory to include the following lines:
+```
+export HADOOP_CLASSPATH=$HADOOP_CLASSPATH:/path/to/project/files
+export PYTHONPATH=$PYTHONPATH:/path/to/project/files
+```
 
-
-- 
