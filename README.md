@@ -80,6 +80,25 @@ spark-submit /path/to/kmeans.py
 ```
 spark-submit /path/to/bayesian.py
 ```
+## Performance Evaluation
+The Performance Evaluation is done by calculating the Response Time of each node while performing different tasks to detect the straggler and then dividing the data blocks according to this formula:
+```
+Block Counts = (Total Blocks* NDT)/Sum of each NDT
+```
+The Response Time is as follows:
+
+![Response time_01](https://github.com/Sanjam-Bedi/Big-Data--Straggler-avoidance-using-Historical-Data/assets/74055483/671f79cd-0dc1-48e8-89cd-d6fd605e26cf)
+
+
+
+
+
+The Block Placement is as follows:
+
+
+![Block_Placements_01](https://github.com/Sanjam-Bedi/Big-Data--Straggler-avoidance-using-Historical-Data/assets/74055483/92bf720a-7fa1-4cae-8525-6632f36e8319)
+
+
 
 
 
