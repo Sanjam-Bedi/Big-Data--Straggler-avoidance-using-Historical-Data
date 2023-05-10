@@ -54,7 +54,7 @@ mvn -Dspark=2.4 -Dscala=2.11 clean package
 To run the micro benchmark workloads, follow these steps:
 - Copy the input file to the Hadoop Distributed File System (HDFS):
 ```
-hdfs dfs -put /path/to/input/file /inpu
+hdfs dfs -put /path/to/input/file /input
 ```
 - Run the Sort workload:
 ```
