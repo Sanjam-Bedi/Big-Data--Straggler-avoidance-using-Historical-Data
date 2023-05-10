@@ -11,7 +11,8 @@ To use this project, you will need to have the following software installed on y
 ## Configuration
 1. Before running the project, you will need to configure the Hadoop multinode cluster with 3 nodes to work with the project.
 - Modify the hdfs-site.xml and core-site.xml files in the etc/hadoop directory to include the following properties:
-''' <property>
+```
+<property>
    <name>mapreduce.job.reduce.slowstart.completedmaps</name>
    <value>0.7</value>
 </property>
@@ -22,7 +23,8 @@ To use this project, you will need to have the following software installed on y
 <property>
    <name>mapreduce.job.jvm.numtasks</name>
    <value>-1</value>
-</property> '''
+</property> 
+```
 
 
 
