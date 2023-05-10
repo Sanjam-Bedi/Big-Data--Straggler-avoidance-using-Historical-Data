@@ -45,4 +45,44 @@ To use this project, you will need to have the following software installed on y
 export HADOOP_CLASSPATH=$HADOOP_CLASSPATH:/path/to/project/files
 export PYTHONPATH=$PYTHONPATH:/path/to/project/files
 ```
+## HiBench Setup
+- To simply build all modules in HiBench, use the below command. This could be time consuming because the hadoopbench relies on 3rd party tools like Mahout and Nutch. The build process automatically downloads these tools for you. If you won't run these workloads, you can only build a specific framework to speed up the build process.
+```
+mvn -Dspark=2.4 -Dscala=2.11 clean package
+``
+## Run micro bench and ML workloads in hibench
+To run the micro benchmark workloads, follow these steps:
+- Copy the input file to the Hadoop Distributed File System (HDFS):
+```
+hdfs dfs -put /path/to/input/file /inpu
+```
+- Run the Sort workload:
+```
+hadoop jar /path/to/hadoop-examples.jar sort /input /output
+```
+- Run the Wordcount workload:
+```
+hadoop jar /path/to/hadoop-examples.jar wordcount /input /output
+```
+- Run the Terasort workload:
+```
+hadoop jar /path/to/hadoop-examples.jar terasort /input /output
+```
+- Run the Sleep workload
+```
+hadoop jar /path/to/hadoop-examples.jar sleep -m 1 -r 1 -mt 1000 -rt 1000
+```
+- Run the K Means workload:
+```
+spark-submit /path/to/kmeans.py
+```
+- Run the Bayesian workload:
+```
+spark-submit /path/to/bayesian.py
+```
+
+
+
+
+
 
