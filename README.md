@@ -49,7 +49,7 @@ export PYTHONPATH=$PYTHONPATH:/path/to/project/files
 - To simply build all modules in HiBench, use the below command. This could be time consuming because the hadoopbench relies on 3rd party tools like Mahout and Nutch. The build process automatically downloads these tools for you. If you won't run these workloads, you can only build a specific framework to speed up the build process.
 ```
 mvn -Dspark=2.4 -Dscala=2.11 clean package
-``
+```
 ## Run micro bench and ML workloads in hibench
 To run the micro benchmark workloads, follow these steps:
 - Copy the input file to the Hadoop Distributed File System (HDFS):
