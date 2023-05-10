@@ -1,4 +1,4 @@
-# Big-Data--Straggler-avoidance-using-Historical-Data
+# Straggler-avoidance-using-Historical-Data-in-Hadoop-multinode-cluster
 
 ## Introduction
 This project implements a historical data based straggler avoidance technique in a Hadoop cluster with 3 nodes, which include 1 master node and 2 slave nodes. It has been implemented on virtual machine using Virtual Box. The aim of the project is to optimize the performance of the Hadoop cluster by identifying and mitigating stragglers.
